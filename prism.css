@@ -2,6 +2,7 @@
    &languages=markup+css+clike+javascript+applescript+aspnet+bash+c+csharp+cpp+css-extras+
     go+ini+java+markdown+objectivec+pascal+perl+php+php-extras+python+ruby+sql+swift
    &plugins=line-numbers+show-language */
+   
 /*
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -11,15 +12,15 @@
 code[class*="language-"],
 pre[class*="language-"] {
   color: black;
-  text-shadow: 0 1px white;
+  /*text-shadow: 0 1px white;*/
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  line-height: 1.2;
-  font-size: 10pt;
+  line-height: 1.1em;
+  font-size: 1em;
 
   -moz-tab-size: 4;
   -o-tab-size: 4;
@@ -159,7 +160,8 @@ pre.line-numbers > code {
   width: 2.0em;  
   letter-spacing: -1px;
   border-right: 1px solid #999;
-  line-height: 1.2;
+  line-height: inherit;
+  font-size: 1em;
 
   -webkit-user-select: none;
   -moz-user-select: none;
