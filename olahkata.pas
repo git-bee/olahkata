@@ -310,5 +310,5 @@ begin
   // clean up and close app
   foundWords.Free;
   dictWords.Free;
-  WriteAppFooter;
+  WriteAppFooter(true,'https://github.com/git-bee/olahkata');
 end.

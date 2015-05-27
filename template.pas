@@ -16,7 +16,7 @@ const
 
 procedure WriteAppHeader(const aCSSFile: string = ''; const aJSFile: string = '');
 procedure WriteAppTitle(const aLevel: integer = 3; const aHome: string = 'Home');
-procedure WriteAppFooter(const viewCode: boolean = true);
+procedure WriteAppFooter(const viewCode: boolean = true; const gitRepo: string = '');
 
 function getValue(const aKey, fromString: string; const defValue: string = ''): string;
 function boolToChecked(const aBoolean: boolean): string;
@@ -69,7 +69,7 @@ begin
   writeln('<!--- ### generated content start here ### --->');
 end;
 
-procedure WriteAppFooter(const viewCode: boolean = true);
+procedure WriteAppFooter(const viewCode: boolean = true; const gitRepo: string = '');
 begin
   timeStop := Now;
   writeln('<!--- ### generated content end here ### --->');
@@ -79,7 +79,10 @@ begin
   writeln('    <a href="http://freepascal.org" target=_blank>FreePascal</a>.<br/>');
   writeln('    Courtesy of ');
   writeln('    <a href="http://beeography.koding.io/">beeography.koding.io</a><br/>');
-  if viewCode then writeln('    — <a href="viewcode.cgi?file=',EXE_NAME,'.pas">view source code</a>');
+  if viewCode and (gitRepo <> '') then 
+    writeln('    — <a href="',gitRepo,'" target=_blank>view source code</a>')
+  else if viewCode then
+    writeln('    — <a href="viewcode.cgi?file=',EXE_NAME,'.pas">view source code</a>');
   writeln('  </div>');
   writeln('</body></html>');
 end;
