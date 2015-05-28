@@ -1,0 +1,153 @@
+h3 {
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+}
+
+body {
+  font-size: 10pt;
+  font-family: Helvetica;
+  margin: 20px;
+}
+
+@media handheld, 
+  (max-width: 640px), 
+  (max-device-width: 480px) {
+    body {
+      margin: 10px; 
+      width:90%
+    }
+  }
+
+input[type="text"] {
+  font-size: 10pt;
+  padding: 2px;
+  margin: 0 2px;
+  width: 160px;
+}
+
+input[type="submit"] {
+  font-size: 12pt;
+  margin: 0 2px;
+}
+
+input[type="radio"] {
+  margin: 2px 2px 2px 2px;
+}
+
+select {
+  font-size: 12pt; 
+  margin: 4px 4px;
+  width: 200px;
+}
+
+pre {
+  font-size: 11pt;
+  margin: 0 4px;
+  overflow: auto;
+}
+
+code {
+  font-size: 11pt;
+  margin: 0 4px;
+}
+
+label {
+  cursor: pointer;
+}
+
+table, th, td, tr { 
+  font-size: 10pt; 
+  border: 1px solid; 
+  padding: 2px 4px; 
+  border-collapse: collapse; 
+}
+
+li {
+  margin-left: -10px;
+}
+
+th {
+  background-color: #666;
+  border-color: #000;
+  color: #fff;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #eee;
+}
+
+tr:nth-of-type(even) {
+  background-color: #fff;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #999;
+}
+
+mark {
+  margin: 0 4px;
+}
+
+.content, .box {
+  border: 1px;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 6px;
+  background-color: white;
+  padding: 12px;
+  margin: 6px 0;
+  min-width: 400px;
+  overflow: auto;
+}
+
+.caption {
+  display: inline-block;
+  width: 60px;
+  margin: 0 0 12px 0px;
+}
+
+.separator {
+  display: inline-block;
+  margin: 0 2px;
+  width: 40px;
+  text-align: right;
+}
+
+.footer {
+  font-size: 8pt;
+  font-style: italic;
+}
+
+.smaller {
+  font-size: 9pt;
+  font-style: italic;
+}
+
+.bigger {
+  font-size: 14pt;
+}
+
+.error {
+  color: red;
+  background-color: yellow;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 2pt;
+}
+
+.letters {
+  color: blue;
+  background-color: yellow;
+  font-weight: bold;
+  font-size: 11pt;
+  text-transform: uppercase;
+  letter-spacing: 4pt;
+  padding: 0 0 0 4pt;
+}
+
+.tighter {
+  margin-top: 5px;
+}
